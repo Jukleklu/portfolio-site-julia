@@ -75,12 +75,16 @@ a:active { /* selected link */
   background-color: #323232;
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
+  text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #323232; /* width of the border, type, color */
-  transition: 0.2s opacity;
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
-
+.button:hover {
+  opacity: 0.8;
+}
 .button.contact {
   background-color: transparent;
   color: #323232;
@@ -96,9 +100,21 @@ a:active { /* selected link */
 .container {
   padding: 0 15px;
 }
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .center {
   text-align: center;
 }
@@ -139,6 +155,9 @@ nav > ul > li > a {
   width: 100%;
   text-align: center
 }
+#hero span {
+  display: block;
+}
 
 /* ==============================
 Medium devices (640px and larger)
@@ -159,4 +178,12 @@ X-large devices (1440px or larger)
 Extra-large devices (1920px or larger)
 ================================= */
 @media only screen and (min-width: 1920px) {
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+[class*="col-"] {
+  float: left;
 }
