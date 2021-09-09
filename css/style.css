@@ -187,3 +187,7 @@ Extra-large devices (1920px or larger)
 [class*="col-"] {
   float: left;
 }
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
