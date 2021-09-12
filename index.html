@@ -18,6 +18,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;1,100&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/01b7c8dea1.js" crossorigin="anonymous"></script>
 <head/>
 
       <body>
@@ -25,13 +26,15 @@
         <header>
           <!-- For the navigation -->
           <div class="container">
-            <img class="logo" src="img/misc/png/jkk_logo.png" alt="Julia Klein-Klute" >
-            <nav>
+       <div class="navtoggle" id="myNavtoggle">
+         <img class="logo" src="img/misc/png/jkk_logo.png" alt="Julia Klein-Klute" >|
+         <nav>
               <ul class="navigation">
               <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="#contact">Contact</a></li>
+              <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
             </ul>
             </nav>
           </div>
@@ -1038,11 +1041,11 @@
                 </svg>
         </div>
                   </div>
+                
                   <div><!-- RIGHT COLUMN (TEXT AND BUTTON) -->
                     <div class="column col-md-6 col-lg-5">
-                <h3>Project name</h3>
-                    <h3>VocApp</h3>
-                    <p>Vocabulary App for improving languages on the go. Role: Brand Concept, Visual Identity, UX Research, UX Design and UI Design.
+                <h3>Clouds</h3>
+                    <p>Animated Illustration
                     </p>
                     <a href="#" class="button">View Project</a>
                   </div>
@@ -1078,6 +1081,7 @@
                           <p>Copyright Julia Klein-Klute 2021</p>
                         </div>
                       </footer>
+                      <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
                       <script src="js/scripts.js"></script>
     </body>
 

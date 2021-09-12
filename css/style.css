@@ -7,93 +7,183 @@ Secondary Color (Lilac): #B6AFE0;
 Secondary Color (Black): #323232
 */
 
-
 header {
-  text-align: unset;
-  background-color: #ffe4c4;
+  background-color: #ffffff;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
+  position: fixed;
+  border-bottom: 2px solid #F19C79;
+  width: 100%;
+  display: inline-block;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-}
 body {
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px; /* Sets the font size to 16px */
+  font-size: 16px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #323232;
 }
 
+main {
+  padding-top: 90px;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
+nav>ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  color: rgba(241,156,121);
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+/* our hamburger menu */
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 127, 80, 0.5);
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+
+nav>ul>li>a:hover {
+  color: rgba(241,156,121);
+  text-decoration: underline;
+}
+
+nav>ul>li>a:focus {
+  color: rgba(241,156,121);
+  text-decoration: underline;
+}
+
+nav>ul>li>a:active {
+  color: rgba(76, 5, 20)
+}
+
 h1, h2, h3, h4 {
   line-height: 1.4;
 }
+
 h1 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.75em;
   font-weight: 500;
 }
 
 h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.25em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h3 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.75em;
   font-weight: 400;
 }
+
 h4 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.35em;
-  font-weight: 100;
+  font-weight: 300;
+}
+
+#logo {
+  max-width: 100px;
 }
 
 img {
   width: 100%;
+  height: auto;
 }
-
 a {
-  color: #ff7f50;
-  text-decoration: none; /* No underlining */
+  color: #F19C79;
+  text-decoration: none;
 }
 
-a:visited { /* visited link */
-  color: #ff7f50;
-}
 a:hover,
 a:focus {
-  color: #cc6540;
+  color: #A44A3F;
   text-decoration: underline;
 }
-a:active { /* selected link */
-  color: #994c30;
+
+a:active {
+  color: rgba(76, 5, 20)
 }
 
 .button {
-  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #323232;
-  color: #ffffff; /* needed to override the default link color */
+  display: inline-block;
+  background-color: #A44A3F;
+  color: #ffffff;
   font-weight: 400;
+  padding: 14px;
+  border-radius: 6px;
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: .8;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.button:active {
+  opacity: .8;
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: rgba(58, 14, 3);
+  color: #FEE3E0;
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #323232; /* width of the border, type, color */
-  transition-duration: 0.2s;
-  transition-property: opacity;
+  border: .33px solid #FEE3E0;
+  transition-duration: .2s;
+  transition-property: color;
 }
-.button:hover {
-  opacity: 0.8;
-}
-.button.contact {
-  background-color: transparent;
-  color: #323232;
-  text-transform: uppercase;
-  border: 2px solid #323232;
-}
+
 .button.contact:hover {
-  background-color: #323232;
-  color: #ffffff;
+  background-color: rgba(251, 186, 178);
+  color: rgba(58, 14, 3);
+  transition: 0.2s;
 }
 
 /* Layout styling */
@@ -122,6 +212,269 @@ a:active { /* selected link */
 .logo {
   max-width: 250px;
 }
+
+
+/* ---------------------------- INDEX / HOMEPAGE ---------------------------- */
+/* -------------------------------------------------------------------------- */
+#hero {
+  background-color: #ffffff;
+  display: inline-block;
+  width: 100%;
+  padding: 50px 30px 0px 25px;
+}
+
+#hero span {
+  display: block;
+  margin: auto;
+}
+
+#hero_illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-left: 0px;
+  margin-left: 0px;
+
+}
+
+.illustration {
+  display: block;
+}
+
+
+.box-mf {
+  padding: 40px 16px 32px 16px;
+  background-color: #ffffff;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 4px 1px 16px 0px #000000;
+  -moz-box-shadow: 4px 1px 16px 0px #000000;
+  box-shadow: 4px 1px 16px 0px #000000;
+  border-radius: 20px;
+}
+
+#contact h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif
+}
+
+#contact svg {
+  width: auto;
+  height: 25px;
+}
+
+#copyright p {
+  text-align: center;
+}
+
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  border-top: 2px solid #F19C79;
+}
+
+.social>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social>ul>li {
+  display: inline-block;
+  padding: 20px 8px;
+}
+
+
+/* ---------------------------- ABOUT PAGE ---------------------------- */
+/* -------------------------------------------------------------------------- */
+#aboutimage {
+  max-width: 300px
+}
+
+#aboutme {
+  padding-top: 130px;
+}
+
+#aboutme h1 {
+  text-align: center;
+}
+
+#aboutme h2 {
+  text-align: center;
+}
+
+#aboutme p{
+font-family:'Montserrat', sans-serif;
+line-height: 2.4;
+font-size: 15px;
+font-weight: 300;
+
+}
+
+#skills h3 {
+  text-align: center;
+}
+
+.row-about-resume {
+  text-align: center;
+}
+
+#aboutimage {
+  float: left;
+  margin: 0 12px 12px 0;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 3px solid rgba(164, 74, 63);
+}
+
+
+/* ---------------------------- COLUMN REFERENCE ----------------------------- */
+/* --------------------------------------------------------------------------- */
+[class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+
+.reverseimg [class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px
+}
+
+/* ---------------------------- CSS ANIMATION ----------------------------- */
+/* --------------------------------------------------------------------------- */
+.cloud-back {
+  animation: 15s cloud-move-reverse infinite alternate linear;
+}
+
+.sun {
+  animation-duration: 2s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+
+
+#Smiley {
+  animation: moveSmiley;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in;
+}
+
+@keyframes moveSmiley {
+  to {
+    transform: translateY(90px);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #E496A0;
+  }
+
+  50% {
+    fill: #D16243;
+  }
+
+  100% {
+    fill: #A44A3F;
+  }
+}
+
+#screen {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate-reverse;
+}
+
+#Cloud {
+  animation-duration: 5s;
+  animation-name: Cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes Cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -134,78 +487,113 @@ Medium devices (640px and larger)
   nav {
     width: auto;
     float: right;
-    margin-top: 4px;
+    margin-top: 25px;
   }
-}
-nav > ul > li {
-  display: inline-block;
-}
 
-nav > ul > li > a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
-}
+  nav>ul>li {
+    display: inline-block;
+    position: relative;
+  }
 
-#hero {
-  background-color: #ffe4c4;
-  padding: 20px 0;
-  display: inline-block;
-  width: 100%;
-  text-align: center
-}
-#hero span {
-  display: block;
-}
+  nav>ul {
+    margin: 1em 0;
+  }
 
-/* ==============================
-Medium devices (640px and larger)
-================================= */
-@media only screen and (min-width: 640px) {
-}
-/* ==============================
-Large devices (1024px or larger)
-================================= */
-@media only screen and (min-width: 1024px) {
-}
-/* ==============================
-X-large devices (1440px or larger)
-================================= */
-@media only screen and (min-width: 1440px) {
-}
-/* ==============================
-Extra-large devices (1920px or larger)
-================================= */
-@media only screen and (min-width: 1920px) {
-}
 
-.col-md-6 {
-  width: 50%;
-}
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
 
-[class*="col-"] {
-  float: left;
-}
-@keyframes color-change {
-  0% {fill: #edc655;}
-  50% {fill: #fcffad;}
-  100% {fill: #f76414;}
-}
-.sun {
-  animation: 4s color-change infinite alternate linear;
-}
-@keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
-}
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-@keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
-}
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  .col-md-5 {
+    width: 41.66%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+
+  .col-md-7 {
+    width: 58.33%;
+  }
+
+  .skills_tools {
+    padding-left: 220px;
+  }
+
+  #hero {
+    background-color: #ffffff;
+    display: inline-block;
+    width: 100%;
+    padding: 120px 25px 0px 20px;
+  }
+
+  main {
+    padding-top: 120px;
+  }
+
+
+
+  #hero_illustration {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 70px 0px 0px 50px;
+  }
+
+  /* ==============================================================================================
+    Large devices (1024px or larger)
+    ================================================================================================== */
+  @media only screen and (min-width: 1024px) {
+    .col-lg-7 {
+      width: 58.33%;
+    }
+
+    .col-lg-5 {
+      width: 41.66%;
+    }
+
+    /* ------------ NAV BAR ANIMATION ------------ */
+    li.borderXwidth {
+      position: relative;
+    }
+
+    li.borderXwidth a:before,
+    li.borderXwidth a:after {
+      position: absolute;
+      opacity: 0;
+      width: 0%;
+      height: 2px;
+      content: '';
+      background: #F19C79;
+      transition: all 0.3s;
+    }
+
+    li.borderXwidth a:before {
+      left: 0px;
+      top: 0px;
+    }
+
+    li.borderXwidth a:after {
+      right: 0px;
+      bottom: 0px;
+    }
+
+    li.borderXwidth a:hover:before,
+    li.borderXwidth a:hover:after {
+      opacity: 1;
+      width: 100%;
+    }
+
+
+    #hero_illustration {
+      width: 73%;
+      height: auto;
+      display: block;
+      margin: 30px 0px 0px 168px;
+    }
+  }
